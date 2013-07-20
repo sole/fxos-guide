@@ -43,7 +43,7 @@ There's a very, *very* important gotcha here: you need to specify an *absolute* 
 
 If all goes well, you'll get this screen after a while (and a lot of messages will be output to the shell window)
 
-(TODO screenshot)
+![Gaia on the browser](../imgs/gaia_in_browser.png)
 
 Take a look at the URL bar. It should be: ```http://system.gaiamobile.org:8080/```
 
