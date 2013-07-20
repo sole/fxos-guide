@@ -45,9 +45,11 @@ If all goes well, you'll get this screen after a while (and a lot of messages wi
 
 ![Gaia on the browser](../imgs/gaia_in_browser.png)
 
-Take a look at the URL bar. It should be: ```http://system.gaiamobile.org:8080/```
+Take a look at the URL bar. It should be something like: ```app://system.gaiamobile.org/```
 
-Isn't it slightly *special*? There's some magic in action mapping ```app-name.gaiamobile.org:8080``` to each actual app code. So if you know which app you want to run, you can just type its URL into the bar, and press ENTER as usual. Some examples could be the home screen, at ```http://homescreen.gaiamobile.org:8080/```, or even the famous Crystal Skull at ```http://crystalskull.gaiamobile.org:8080/```. The _Contacts_ app is slightly different, but it's accessible at ```http://communications.gaiamobile.org:8080/contacts```.
+Isn't it slightly *special*? There's some magic in action mapping ```app-name.gaiamobile.org``` to each actual app code. So if you know which app you want to run, you can just type its URL into the bar, and press ENTER as usual. For example, the famous Crystal Skull at ```http://crystalskull.gaiamobile.org:8080/```. The _Contacts_ app is slightly different, but it's accessible at ```http://communications.gaiamobile.org:8080/contacts```.
+
+*NOTE*: some things might not work. See the very last line in this document, and make sure to keep an eye on the Web Console for errors.
 
 ## What's in a profile?
 
