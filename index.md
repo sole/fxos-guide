@@ -22,7 +22,7 @@ Some templates that can be used as starting point:
 ### Testing and automation
 
 * [General testing](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Testing)
-* [Marionette](https://developer.mozilla.org/en-US/docs/Marionette) automates things
+* [Marionette](https://developer.mozilla.org/en-US/docs/Marionette) automates things. High Fidelity uses it to [test the app](https://github.com/mozilla/high-fidelity/blob/master/test/marionette/test_app.py) using Python.
 
 ## Translations, internationalisation and localisation
 
