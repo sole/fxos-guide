@@ -2,6 +2,14 @@
 
 Hop!
 
+## Translations, internationalisation and localisation
+
+gettext can be used. It's pretty much like the standard and is very mature and solid but has some shortcomings. i10n and l20n have been created to overcome these shortcomings.
+
+* [gettext](http://en.wikipedia.org/wiki/Gettext). See the code for [High Fidelity](https://github.com/mozilla/high-fidelity) podcasts app for an example of using gettext for translations. Includes a [Makefile](https://github.com/mozilla/high-fidelity/blob/master/Makefile) for processing the translations and converting them into .json files ready for being used in the JS code.
+* i10n "internationalisation" - [webL10n](https://github.com/fabi1cazenave/webL10n)
+* l20n "localisation" - [L20n](https://wiki.mozilla.org/L20n) and [HTML with L20n](https://wiki.mozilla.org/L20n/HTML)
+
 ## Resources and tools
 
 (Just putting a list here for now. May expand into its own page if it gets too long)
@@ -18,6 +26,10 @@ Some templates that can be used as starting point:
 ### Development tools
 
 * [Yeoman generator for Firefox OS](https://github.com/pdi-innovation/generator-firefoxos) - if you find the idea of typing ```yo firefoxos``` quite funny, you'll love this one. Provides a set of command line tools for common tasks such as pushing apps to the device or reading their logs. Here's a [webcast](http://www.youtube.com/watch?v=VOQVuAfCDHc).
+
+### Testing and automation
+
+
 
 ## "Hacking"
 
