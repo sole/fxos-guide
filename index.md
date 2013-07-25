@@ -29,7 +29,8 @@ Some templates that can be used as starting point:
 
 ### Testing and automation
 
-
+* [General testing](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Testing)
+* [Marionette](https://developer.mozilla.org/en-US/docs/Marionette) automates things
 
 ## "Hacking"
 
