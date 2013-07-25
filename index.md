@@ -38,6 +38,12 @@ gettext can be used. It's pretty much like the standard and is very mature and s
 
 * [Running Gaia on your computer](chapters/hacking-running-gaia-on-your-computer.md)
 
+## Updating the software in physical phones
+
+### Flashing new ROMs
+
+* [Geeksphones](http://downloads.geeksphone.com/)
+
 ## Marketplace and selling
 
 * [Badges](https://assets.mozillalabs.com/Projects/Firefox%20Marketplace/Badges/) for linking to your app in the Marketplace
