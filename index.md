@@ -24,6 +24,19 @@ Some templates that can be used as starting point:
 * [General testing](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Testing)
 * [Marionette](https://developer.mozilla.org/en-US/docs/Marionette) automates things. High Fidelity uses it to [test the app](https://github.com/mozilla/high-fidelity/blob/master/test/marionette/test_app.py) using Python.
 
+## The Web API
+
+Embracing the Open Web Apps spirit (and standard-to-be)!
+
+### Web Activities
+
+* [Description](https://developer.mozilla.org/en-US/docs/WebAPI/Web_Activities)
+* [Specification](https://wiki.mozilla.org/WebAPI/WebActivities)
+
+Firefox OS exposes the (not yet standard) MozActivity API.
+
+* [Sharing images](chapters/webapi-activities-sharing-images.md)
+
 ## Translations, internationalisation and localisation
 
 gettext can be used. It's pretty much like the standard and is very mature and solid but has some shortcomings. i10n and l20n have been created to overcome these shortcomings.
