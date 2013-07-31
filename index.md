@@ -49,6 +49,10 @@ Some templates that can be used as starting point:
 * [General testing](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Testing)
 * [Marionette](https://developer.mozilla.org/en-US/docs/Marionette) automates things. High Fidelity uses it to [test the app](https://github.com/mozilla/high-fidelity/blob/master/test/marionette/test_app.py) using Python.
 
+### File management tools
+
+* [aafm](https://github.com/sole/aafm) is a Python + GTK tool based on adb (the Android Debug Bridge that Firefox OS uses too). It allows for browsing phones' filesystems, and copying and reading files between the computer and the device.
+
 ## "Hacking"
 
 "Advanced topics", for power users and tinkerers.
