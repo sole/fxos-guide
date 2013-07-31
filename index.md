@@ -53,7 +53,7 @@ Some templates that can be used as starting point:
 
 #### aafm
 
-![aafm exploring a Firefox OS phone](../imgs/aafm-fxos.png)
+![aafm exploring a Firefox OS phone](imgs/aafm-fxos.png)
 
 [aafm](https://github.com/sole/aafm) is a Python + GTK tool based on adb (the Android Debug Bridge that Firefox OS uses too). It allows for browsing phones' filesystems, and copying and reading files between the computer and the device.
 
