@@ -1,6 +1,31 @@
 # Firefox OS guide
 
-Hop!
+This is a perpetual work-in-progress; new content is added as I learn about it. If you want to contribute, do it! Make changes and send a pull request.
+
+## The Web API
+
+Embracing the Open Web Apps spirit (and standard-to-be)!
+
+### Web Activities
+
+* [Description](https://developer.mozilla.org/en-US/docs/WebAPI/Web_Activities)
+* [Specification](https://wiki.mozilla.org/WebAPI/WebActivities)
+
+Firefox OS exposes the (not yet standard) MozActivity API.
+
+* [Sharing images](chapters/webapi-activities-sharing-images.md)
+
+## Translations, internationalisation and localisation
+
+gettext can be used. It's pretty much like the standard and is very mature and solid but has some shortcomings. i10n and l20n have been created to overcome these shortcomings.
+
+* [gettext](http://en.wikipedia.org/wiki/Gettext). See the code for [High Fidelity](https://github.com/mozilla/high-fidelity) podcasts app for an example of using gettext for translations. Includes a [Makefile](https://github.com/mozilla/high-fidelity/blob/master/Makefile) for processing the translations and converting them into .json files ready for being used in the JS code.
+* i10n "internationalisation" - [webL10n](https://github.com/fabi1cazenave/webL10n)
+* l20n "localisation" - [L20n](https://wiki.mozilla.org/L20n) and [HTML with L20n](https://wiki.mozilla.org/L20n/HTML)
+
+## Marketplace and selling
+
+* [Badges](https://assets.mozillalabs.com/Projects/Firefox%20Marketplace/Badges/) for linking to your app in the Marketplace
 
 ## Resources and tools
 
@@ -24,27 +49,6 @@ Some templates that can be used as starting point:
 * [General testing](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Testing)
 * [Marionette](https://developer.mozilla.org/en-US/docs/Marionette) automates things. High Fidelity uses it to [test the app](https://github.com/mozilla/high-fidelity/blob/master/test/marionette/test_app.py) using Python.
 
-## The Web API
-
-Embracing the Open Web Apps spirit (and standard-to-be)!
-
-### Web Activities
-
-* [Description](https://developer.mozilla.org/en-US/docs/WebAPI/Web_Activities)
-* [Specification](https://wiki.mozilla.org/WebAPI/WebActivities)
-
-Firefox OS exposes the (not yet standard) MozActivity API.
-
-* [Sharing images](chapters/webapi-activities-sharing-images.md)
-
-## Translations, internationalisation and localisation
-
-gettext can be used. It's pretty much like the standard and is very mature and solid but has some shortcomings. i10n and l20n have been created to overcome these shortcomings.
-
-* [gettext](http://en.wikipedia.org/wiki/Gettext). See the code for [High Fidelity](https://github.com/mozilla/high-fidelity) podcasts app for an example of using gettext for translations. Includes a [Makefile](https://github.com/mozilla/high-fidelity/blob/master/Makefile) for processing the translations and converting them into .json files ready for being used in the JS code.
-* i10n "internationalisation" - [webL10n](https://github.com/fabi1cazenave/webL10n)
-* l20n "localisation" - [L20n](https://wiki.mozilla.org/L20n) and [HTML with L20n](https://wiki.mozilla.org/L20n/HTML)
-
 ## "Hacking"
 
 "Advanced topics", for power users and tinkerers.
@@ -57,9 +61,6 @@ gettext can be used. It's pretty much like the standard and is very mature and s
 
 * [Geeksphones](http://downloads.geeksphone.com/)
 
-## Marketplace and selling
-
-* [Badges](https://assets.mozillalabs.com/Projects/Firefox%20Marketplace/Badges/) for linking to your app in the Marketplace
 
 ## Miscellanea: questions without answers (yet)
 
