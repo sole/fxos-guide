@@ -31,9 +31,11 @@ gettext can be used. It's pretty much like the standard and is very mature and s
 
 (Just putting a list here for now. May expand into its own page if it gets too long)
 
-### Mozilla Mortar
+### Mozilla Bricks & Mortar
 
-Some templates that can be used as starting point:
+[Brick](http://mozilla.github.io/brick/) is a set of UI Web Components for Mobile Web Apps.
+
+Some Mortar templates that can be used as starting point:
 
 * [App stub](https://github.com/mozilla/mortar-app-stub) - ultra minimal app template with a manifest and code for installing it.
 * [Game stub](https://github.com/mozilla/mortar-game-stub) - game app stub
