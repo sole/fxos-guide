@@ -23,6 +23,10 @@ gettext can be used. It's pretty much like the standard and is very mature and s
 * i10n "internationalisation" - [webL10n](https://github.com/fabi1cazenave/webL10n)
 * l20n "localisation" - [L20n](https://wiki.mozilla.org/L20n) and [HTML with L20n](https://wiki.mozilla.org/L20n/HTML)
 
+## Accessibility
+
+Support for accessibility is being worked on for Firefox OS 1.2. Marco Zehe has [a video](http://www.marcozehe.de/2013/07/19/small-demo-video-about-firefox-os-accessibility/) where he shows the current state of accessibility in Firefox OS devices--he demonstrates how the device can talk to you.
+
 ## Marketplace and selling
 
 * [Badges](https://assets.mozillalabs.com/Projects/Firefox%20Marketplace/Badges/) for linking to your app in the Marketplace
