@@ -65,6 +65,12 @@ Some Mortar templates that can be used as starting point:
 
 [aafm](https://github.com/sole/aafm) is a Python + GTK tool based on adb (the Android Debug Bridge that Firefox OS uses too). It allows for browsing phones' filesystems, and copying and reading files between the computer and the device.
 
+## Key combinations
+
+### Taking a screenshot
+
+Press and hold the power and home buttons simultaneously.
+
 ## "Hacking"
 
 "Advanced topics", for power users and tinkerers.
