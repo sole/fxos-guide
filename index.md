@@ -88,7 +88,13 @@ We need to launch the B2G executable passing it the full path to the profile it 
 An example of how to launch, using Mac OS:
 
 ````bash
-/Users/(YOUR_USER_NAME)/Library/Application Support/Firefox/Profiles/(YOUR_PROFILE_FOLDER)/extensions/r2d2b2g@mozilla.org/resources/r2d2b2g/data/mac64/B2G.app/Contents/MacOS/b2g --jsconsole --profile /Users/(YOUR_USER_NAME)/Library/Application Support/Firefox/Profiles/(YOUR_PROFILE_FOLDER)/extensions/r2d2b2g@mozilla.org/profile
+/Users/(YOUR_USER_NAME)/Library/Application Support/Firefox/Profiles/(YOUR_FIREFOX_PROFILE_FOLDER)/extensions/r2d2b2g@mozilla.org/resources/r2d2b2g/data/mac64/B2G.app/Contents/MacOS/b2g --jsconsole --profile /Users/(YOUR_USER_NAME)/Library/Application Support/Firefox/Profiles/(YOUR_FIREFOX_PROFILE_FOLDER)/extensions/r2d2b2g@mozilla.org/profile
+````
+
+Or a more abstract example:
+
+````bash
+(YOUR_FIREFOX_PROFILE_FOLDER)/extensions/r2d2b2g@mozilla.org/resources/r2d2b2g/data/(PATH_TO_B2G_EXECUTABLE)/b2g --jsconsole --profile (YOUR_FIREFOX_PROFILE_FOLDER)/extensions/r2d2b2g@mozilla.org/profile
 ````
 
 ## Updating the software in physical phones
