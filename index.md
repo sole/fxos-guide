@@ -77,6 +77,20 @@ Press and hold the power and home buttons simultaneously.
 
 * [Running Gaia on your computer](chapters/hacking-running-gaia-on-your-computer.md)
 
+### Accessing the simulator's JavaScript console
+
+This would be roughly equivalent to connecting a physical device via USB and running ````adb logcat``` on it.
+
+You have to launch the simulator from the command line. First make sure it is installed in Firefox, then locate your Firefox profile folder. There, locate the extensions folder, and inside it, locate the B2G executable.
+
+We need to launch the B2G executable passing it the full path to the profile it uses. This profile is inside the simulator extension folder. Once you know all these data, you can finally launch the simulator from a terminal and get all the logging information in it.
+
+An example of how to launch, using Mac OS:
+
+````bash
+/Users/(YOUR_USER_NAME)/Library/Application Support/Firefox/Profiles/(YOUR_PROFILE_FOLDER)/extensions/r2d2b2g@mozilla.org/resources/r2d2b2g/data/mac64/B2G.app/Contents/MacOS/b2g --jsconsole --profile /Users/(YOUR_USER_NAME)/Library/Application Support/Firefox/Profiles/(YOUR_PROFILE_FOLDER)/extensions/r2d2b2g@mozilla.org/profile
+````
+
 ## Updating the software in physical phones
 
 ### Flashing new ROMs
