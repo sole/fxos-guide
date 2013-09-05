@@ -20,8 +20,8 @@ Firefox OS exposes the (not yet standard) MozActivity API.
 gettext can be used. It's pretty much like the standard and is very mature and solid but has some shortcomings. i10n and l20n have been created to overcome these shortcomings.
 
 * [gettext](http://en.wikipedia.org/wiki/Gettext). See the code for [High Fidelity](https://github.com/mozilla/high-fidelity) podcasts app for an example of using gettext for translations. Includes a [Makefile](https://github.com/mozilla/high-fidelity/blob/master/Makefile) for processing the translations and converting them into .json files ready for being used in the JS code.
-* i10n "internationalisation" - [webL10n](https://github.com/fabi1cazenave/webL10n)
-* l20n "localisation" - [L20n](https://wiki.mozilla.org/L20n) and [HTML with L20n](https://wiki.mozilla.org/L20n/HTML)
+* l10n "localisation" - [webL10n](https://github.com/fabi1cazenave/webL10n)
+* l20n aka "l10n version 2", aggregating l10n (localisation) and i18n (internationalisation) - [L20n](https://wiki.mozilla.org/L20n) and [HTML with L20n](https://wiki.mozilla.org/L20n/HTML)
 
 [Localizing Firefox OS Apps](https://hacks.mozilla.org/2013/08/localizing-firefox-os-apps/) is an article describing how Gaia apps use localisation.
 
