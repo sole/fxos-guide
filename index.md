@@ -15,6 +15,10 @@ Firefox OS exposes the (not yet standard) MozActivity API.
 
 * [Sharing images](chapters/webapi-activities-sharing-images.md)
 
+### Firefox OS API vs Chrome App API
+
+[Blog post](http://onecyrenus.wordpress.com/2013/10/14/firefox-vs-chrome-app-apis-how-do-the-apis-compare/) by David Clarke describing the differences between these two APIs.
+
 ## Translations, internationalisation and localisation
 
 gettext can be used. It's pretty much like the standard and is very mature and solid but has some shortcomings. i10n and l20n have been created to overcome these shortcomings.
