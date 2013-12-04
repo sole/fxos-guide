@@ -14,6 +14,7 @@ Embracing the Open Web Apps spirit (and standard-to-be)!
 Firefox OS exposes the (not yet standard) MozActivity API.
 
 * [Sharing images](chapters/webapi-activities-sharing-images.md)
+* [Picking images](chapters/webapi-activities-picking-images.md)
 
 ### Firefox OS API vs Chrome App API
 
