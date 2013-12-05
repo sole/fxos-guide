@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using a Web Activity for picking a picture or falling back to input type=file</title>
+  </head>
+  <body>
+    <h1>Using a Web Activity for picking a picture or falling back to input type=file</h1>
+    <div id="pictures"></div>
+    <div id="controls">
+      <input type="file" accept='image/*'>
+      <button>Take picture...</button>
+    </div>
+    <p>Demonstrating techniques detailed in <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/Camera">Camera API</a> and <a href="https://developer.mozilla.org/en-US/docs/WebAPI/Web_Activities">Web Activities</a></p>
+    <script src="main.js"></script>
+    <style>
+      #controls > * {
+        display: none;
+      }
+    </style>
+  </body>
+</html>
