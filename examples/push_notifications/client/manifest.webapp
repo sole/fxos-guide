@@ -1,0 +1,24 @@
+{
+    "name": "Push Notifications Test",
+    "description": "Firefox OS Push Notifications Example",
+    "launch_path": "/index.html",
+    "orientation": "portrait",
+    "type": "privileged",
+    "developer": {
+        "name": "sole",
+        "url": "http://soledadpenades.com"
+    },
+    "default_locale": "en",
+    "icons": {
+        "60": "/img/icon_60.png"
+    },
+    "permissions": {
+        "desktop-notification": {},
+        "push": {},
+        "systemXHR": {}
+    },
+    "messages": [
+        { "push": "/index.html"},
+        { "notification": "/index.html" }
+    ] 
+}

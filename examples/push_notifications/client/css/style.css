@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    position: relative;
+    height: 100%;
+}
+
+#error {
+    color: #f00;
+    position: absolute;
+    bottom: 0;
+    height: 20%;
+    overflow-y: auto;
+}
