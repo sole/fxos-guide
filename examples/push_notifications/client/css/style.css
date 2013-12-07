@@ -8,10 +8,17 @@ html, body {
     height: 100%;
 }
 
-#error {
-    color: #f00;
+#messages {
     position: absolute;
     bottom: 0;
     height: 20%;
     overflow-y: auto;
 }
+
+    .error {
+        color: #f00;
+    }
+
+    .ok {
+        color: #080;
+    }

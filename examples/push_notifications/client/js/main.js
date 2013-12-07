@@ -1,6 +1,10 @@
 (function() {
-    var errorDiv;
+
+    var messagesDiv;
+    
+    // TODO should try to read stored values here?
     var server = 'http://localhost:6666';
+    var channelURL;
 
     if( !navigator.push ) {
         window.alert('Push Notifications are not available in this environment');
@@ -14,7 +18,7 @@
         console.log('init');
 
         // UI
-        errorDiv = document.getElementById('error');
+        messagesDiv = document.getElementById('messages');
         serverDiv = document.getElementById('server');
 
         serverDiv.value = server;
@@ -22,6 +26,7 @@
         serverDiv.addEventListener('change', updateServerPath, false);
         serverDiv.addEventListener('keyup', updateServerPath, false);
 
+        // TODO should do it only if not registered already?
         // Register with the Push Notification Server
         var request = navigator.push.register();
 
@@ -29,19 +34,10 @@
 
             // Get channel URL
             var channelURL = request.result;
-            console.log(ev);
             console.log('channelURL ' + channelURL);
 
             // Let our server know about the private channelURL
-            ajax('POST', '/register', {
-                channelURL: channelURL
-            }, function(err, res) {
-                if(err) {
-                    reportError('Unable to register channel: ' + err);
-                } else {
-                    
-                }
-            });
+            registerChannelWithServer(channelURL);
         };
 
         request.onerror = function(ev) {
@@ -52,8 +48,26 @@
 
 
     function updateServerPath() {
+        var oldValue = server.trim();
         server = serverDiv.value.trim();
         console.log('update to', server);
+        if(oldValue !== server && channelURL !== undefined) {
+            registerChannelWithServer(channelURL);
+        }
+    }
+
+
+    function registerChannelWithServer(channelURL) {
+        ajax('POST', '/register', {
+            channelURL: channelURL
+        }, function(err, res) {
+            if(err) {
+                reportError('Unable to register channel: ' + err);
+            } else {
+                reportOK('Registered with server');
+            }
+        });
+
     }
 
 
@@ -87,7 +101,18 @@
 
 
     function reportError(msg) {
-        errorDiv.innerHTML += msg + '<br />';
+        reportMessage(msg, 'error');
+    }
+
+    function reportOK(msg) {
+        reportMessage(msg, 'ok');
+    }
+
+    function reportMessage(msg, className) {
+        var p = document.createElement('p');
+        p.className = className;
+        p.innerHTML = msg;
+        messagesDiv.appendChild(p);
     }
 
 })();
