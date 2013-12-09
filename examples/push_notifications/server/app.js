@@ -28,11 +28,9 @@ http.createServer(function(request, response) {
             responseHandler(request, response);
         });
     } else {
-        
+        output404(request, response);        
     }
 
-    // response.write('hey');
-    // response.end();
 
 }).listen(PORT);
 
@@ -82,6 +80,12 @@ function readBodyData(request, callback) {
         callback();
     }
 
+}
+
+
+function output404(request, response) {
+    response.write('404\nNothing found for ' + request.method + ' ' + request.url + '\n');
+    response.end();
 }
 
 
