@@ -12,7 +12,8 @@ var PORT = parseInt(process.argv[2] || 6666, 10);
 // GET /(\d+)
 
 var routes = [
-    [ 'post', '/register', registerClient ]
+    [ 'post', '/register', registerClient ],
+    [ 'post', '/unregister', unregisterClient ]
 ];
 
 http.createServer(function(request, response) {
@@ -100,11 +101,46 @@ function registerClient(request, response) {
         return output404(request, response);
     }
 
-    clients.push({ channelURL: channelURL });
+    if(findClientByChannelURL(channelURL) === null) {
+        clients.push({ channelURL: channelURL });
+    }
 
     response.write('registered - current: ' + clients.length + ' active clients\n');
     response.end();
 }
 
+
+function unregisterClient(request, response) {
+    console.log('unregistering client', request.post);
+
+    var channelURL = request.post.channelURL;
+
+    // If the channelURL is not in the request, say 404 and die
+    if(channelURL === undefined) {
+        return output404(request, response);
+    }
+
+    var registeredClient = findClientByChannelURL(channelURL);
+
+    if(registeredClient !== null) {
+        var pos = clients.indexOf(registeredClient);
+        console.log('existing at', pos);
+        clients.splice(pos, 1);
+    }
+
+    response.write('unregistered - current: ' + clients.length + ' active clients\n');
+    response.end();
+}
+
+
+function findClientByChannelURL(url) {
+    for(var i = 0; i < clients.length; i++) {
+        var c = clients[i];
+        if(c.channelURL === url) {
+            return c;
+        }
+    }
+    return null;
+}
 
 console.log('server listening at', PORT);
