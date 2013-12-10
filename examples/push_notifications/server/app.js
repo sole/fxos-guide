@@ -1,6 +1,7 @@
 var http = require('http');
 var querystring = require('querystring');
 var clients = [];
+var eventSequenceNumber = 1;
 
 var PORT = parseInt(process.argv[2] || 6666, 10);
 
@@ -35,6 +36,13 @@ http.createServer(function(request, response) {
 
 
 }).listen(PORT);
+
+console.log('server listening at', PORT);
+
+scheduleRandomEvent();
+
+
+// ---
 
 
 function parseRoute(requestMethod, requestURL) {
@@ -91,6 +99,17 @@ function output404(request, response) {
 }
 
 
+function findClientByChannelURL(url) {
+    for(var i = 0; i < clients.length; i++) {
+        var c = clients[i];
+        if(c.channelURL === url) {
+            return c;
+        }
+    }
+    return null;
+}
+
+
 function registerClient(request, response) {
     console.log('registering client', request.post);
 
@@ -133,14 +152,15 @@ function unregisterClient(request, response) {
 }
 
 
-function findClientByChannelURL(url) {
-    for(var i = 0; i < clients.length; i++) {
-        var c = clients[i];
-        if(c.channelURL === url) {
-            return c;
-        }
-    }
-    return null;
+function broadcastEvent(info) {
+    console.log('Broadcasting event: ' + info);
 }
 
-console.log('server listening at', PORT);
+
+function scheduleRandomEvent() {
+    var nextEventTimeout = (5000 + Math.random() * 10000) | 0;
+    broadcastEvent('Here is event number... ' + eventSequenceNumber + ' - next in ' + nextEventTimeout);
+    eventSequenceNumber++;
+    setTimeout(scheduleRandomEvent, nextEventTimeout);
+}
+
