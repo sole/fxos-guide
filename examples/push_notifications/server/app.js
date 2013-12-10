@@ -1,5 +1,6 @@
 var http = require('http');
 var querystring = require('querystring');
+var clients = [];
 
 var PORT = parseInt(process.argv[2] || 6666, 10);
 
@@ -92,8 +93,18 @@ function output404(request, response) {
 function registerClient(request, response) {
     console.log('registering client', request.post);
 
-    response.write('register');
+    var channelURL = request.post.channelURL;
+
+    // If the channelURL is not in the request, say 404 and die
+    if(channelURL === undefined) {
+        return output404(request, response);
+    }
+
+    clients.push({ channelURL: channelURL });
+
+    response.write('registered - current: ' + clients.length + ' active clients\n');
     response.end();
 }
+
 
 console.log('server listening at', PORT);
