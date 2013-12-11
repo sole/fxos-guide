@@ -153,13 +153,19 @@ function unregisterClient(request, response) {
 
 
 function broadcastEvent(info) {
-    console.log('Broadcasting event: ' + info);
+    console.log('Broadcasting event: ' + info.sequenceNumber + ' to ' + clients.length + ' clients');
+    
+    // PUT -d version=version
+    // TODO Asynchronously iterate over the clients and send current sequenceNumber to the PNS
 }
 
 
 function scheduleRandomEvent() {
     var nextEventTimeout = (5000 + Math.random() * 10000) | 0;
-    broadcastEvent('Here is event number... ' + eventSequenceNumber + ' - next in ' + nextEventTimeout);
+    broadcastEvent({
+        sequenceNumber: eventSequenceNumber,
+        message: 'Here is event number... ' + eventSequenceNumber + ' - next in ' + nextEventTimeout
+    });
     eventSequenceNumber++;
     setTimeout(scheduleRandomEvent, nextEventTimeout);
 }
