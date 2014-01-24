@@ -6,6 +6,10 @@ This is a perpetual work-in-progress; new content is added as I learn about it. 
 
 Embracing the Open Web Apps spirit (and standard-to-be)!
 
+### Screen orientation lock
+
+* [Example](examples/orientation_lock) - TODO Pending: write "chapter" on that.
+
 ### Web Activities
 
 * [Description](https://developer.mozilla.org/en-US/docs/WebAPI/Web_Activities)
